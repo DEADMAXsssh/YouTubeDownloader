@@ -1,4 +1,4 @@
-this is it name: 🎯 YouTubeDownloader
+name: 🎯 YouTubeDownloader
 
 on:
   workflow_dispatch:
