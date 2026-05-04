@@ -43,7 +43,6 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y zip curl jq
-
       - name: 🎯 Request Conversion via API
         id: converter
         run: |
@@ -314,7 +313,6 @@ jobs:
           echo "📏 Size: ${FILE_SIZE_MB} MB"
           echo "🎚️ Quality: $QUALITY"
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-
       - name: ✂️ Smart Split Large Files
         run: |
           THRESHOLD_MB="${{ github.event.inputs.split_threshold_mb }}"
@@ -360,7 +358,6 @@ jobs:
           echo "📂 Final files in ./downloads/:"
           ls -lh ./downloads/ 2>/dev/null | tail -n +2 | awk '{print "  • " $NF " (" $5 ")"}'
           echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-
       - name: 📤 Commit and Push to Repository
         run: |
           BRANCH="${GITHUB_REF_NAME}"
